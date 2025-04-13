@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - CHAT-CO</title>
+</head>
+<body>
+  <h2>Upload New College Dataset</h2>
+  {% if message %}<p style="color:green;">{{ message }}</p>{% endif %}
+  {% if error %}<p style="color:red;">{{ error }}</p>{% endif %}
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".csv" required>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
