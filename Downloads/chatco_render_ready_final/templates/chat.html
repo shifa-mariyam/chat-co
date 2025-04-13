@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CHAT-CO Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>CHAT-CO</h1>
+    <p>College of Engineering Thalassery AI Assistant</p>
+  </header>
+  <div class="container">
+    <img class="logo" src="{{ url_for('static', filename='images/logooo.png') }}" alt="CHAT-CO Logo" />
+    <div class="chat-box" id="chatBox">
+      <div class="message bot">
+        <img src="{{ url_for('static', filename='images/logooo.png') }}" alt="Bot Logo" />
+        Welcome to CHAT-CO! Ask your questions related to the college.
+        <div class="timestamp">Now</div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your question..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 CHAT-CO | College of Engineering Thalassery
+  </footer>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
